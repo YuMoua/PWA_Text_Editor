@@ -1,17 +1,26 @@
-import HtmlWebpackPlugin from 'html-webpack-plugin';
-import WebpackPwaManifest from 'webpack-pwa-manifest';
-import { resolve, join } from 'path';
-import { InjectManifest } from 'workbox-webpack-plugin';
-import { fileURLToPath } from 'url';
-import { dirname } from 'path';
+// import HtmlWebpackPlugin from 'html-webpack-plugin';
+// import WebpackPwaManifest from 'webpack-pwa-manifest';
+// import { resolve, join } from 'path';
+// import { InjectManifest } from 'workbox-webpack-plugin';
+// import { fileURLToPath } from 'url';
+// import { dirname, path } from 'path';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+// const __filename = fileURLToPath(import.meta.url);
+// const __dirname = dirname(__filename);
+
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const WebpackPwaManifest = require('webpack-pwa-manifest');
+const path = require('path');
+const { InjectManifest } = require('workbox-webpack-plugin');
+
+
 
 // TODO: Add and configure workbox plugins for a service worker and manifest file.
 // TODO: Add CSS loaders and babel to webpack.
 
-export default () => {
+// export default () => {
+module.exports = () => {
+
   return {
     mode: 'development',
     entry: {
@@ -20,7 +29,7 @@ export default () => {
     },
     output: {
       filename: '[name].bundle.js',
-      path: resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'dist'),
     },
     plugins: [
       // Webpack plugin that generates our html file and injects our bundles. 
