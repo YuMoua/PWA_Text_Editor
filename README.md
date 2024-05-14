@@ -10,6 +10,8 @@
 
   ## Installation
   ```
-  Go to https://yumoua.github.io/PWA_Text_Editor/
+  Go to https://yumoua.github.io/PWA_Text_Editor/ for the repository code.
+
+  Go to https://pwatext-editor-830c69004a2c.herokuapp.com/ to go to the launched website.
   ```
   
